@@ -140,6 +140,18 @@
             <script  async   src ="https://static.codepen.io/assets/embed/ei.js"></script>
         
         </section>
+
+        <section  class ="slide"  id ="workshop-outline">
+            <h2>What We Will Cover Today</h2>
+            <ul>
+                <li>Definition of an SVG</li>
+                <li>How to program SVG lines and shapes</li>
+                <li>Definition of CSS</li>
+                <li>Using CSS transformations</li>
+                <li>Using CSS for animations</li>
+                <li>Using motion paths in CSS</li>
+            </ul>
+        </section>
         
         <section  class ="slide"  id ="images-on-web">
         
@@ -306,21 +318,34 @@
             <img src="images/svgWithGrid.png"/>
         
         </section>
+
+        <section  class ="slide"  id ="svg-shapes">
+            
+            <h2>Let's Look At Some SVG Shapes!</h2>
+            
+            <a  href ="http://bit.ly/2MvWCMQ">http://bit.ly/2MvWCMQ</a>
+            
+            <p  class ="codepen"  data-height ="500"  data-theme-id ="0"  data-default-tab ="html,result"  data-user ="caitlinhaaf"  data-slug-hash ="XWWNMxE"  style ="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"  data-pen-title ="Basic SVG Shapes">
+            
+            <span>See the Pen <a  href ="https://codepen.io/caitlinhaaf/pen/XWWNMxE">
+            
+            Basic SVG Shapes</a> by Caitlin Haaf (<a  href ="https://codepen.io/caitlinhaaf">@caitlinhaaf</a>)
+            
+            on <a  href ="https://codepen.io">CodePen</a>.</span>
+            
+            </p>
+            
+            <script  async   src ="https://static.codepen.io/assets/embed/ei.js"></script>
+        
+        </section>
             
         <section  class ="slide"  id ="svg-paths">
-            
             <h2>SVG Paths</h2>
-            
             <ul>
-            
-            <li>M - "move to", how you define where you want your path to start; will not draw a line</li>
-            
-            <li>L - "line to", draw a straight line to a point</li>
-            
-            <li>C - "curve to", draw a curved line to; you also have to define you point "anchors"</li>
-            
-            <li>Z - "closepath", creates a line to the first point, closing off your line into a shape</li>
-            
+                <li>M - "move to", how you define where you want your path to start; will not draw a line</li>
+                <li>L - "line to", draw a straight line to a point</li>
+                <li>C - "curve to", draw a curved line to; you also have to define you point "anchors"</li>
+                <li>Z - "closepath", creates a line to the first point, closing off your line into a shape</li>
             </ul>
             
             <code>
@@ -329,7 +354,17 @@
                 stroke="green" stroke-width="4" /&gt;
             &lt;/svg&gt;
             </code>
-        
+        </section>
+
+        <section  class ="slide"  id ="svg-curvedpaths">
+            <h2>Curved SVG Paths</h2>
+            <p>Drawing curved SVG lines gets a bit more complicated - you have to include the positions of <b>anchor points</b> which will define the direciton of your curve.</p>
+            
+            <div class="flexContainer">
+                <img src="images/cubic01.svg">
+                <img src="images/cubic02.svg">
+            </div>
+            
         </section>
         
         <section  class ="slide"  id ="svg-pathsExample">
@@ -380,7 +415,6 @@
         <section  class ="slide"  id ="css-transformations">
             
             <h2>CSS Transforms</h2>
-            
             <p>Used to scale, move, rotate, or even use 3D effects</p>
             
             <code>
@@ -391,18 +425,52 @@
             #circle{
                 transform: scale(2);
             }
-            
+            </code>
+            <p>We can combine CSS transformations by having them all on one line:</p>
+            <code>
             #triangle{
                 transform: translate(100px, 200px);
             }
             </code>
-        
+        </section>
+
+        <section  class ="slide"  id ="css-transformOrigin">
+            <h2>CSS Transform-Origin</h2>
+            <ul>
+                <li>You can change the effect of the CSS transformation by changing the <b>transform-origin</b> property</li>
+                <li>Example: do you think the images below would animate differently based on the different positions of the transform-origin?</li>
+            </ul>
+            
+            <div class="flexContainer">
+                <img src="images/transformOrigin01.png">
+                <img src="images/transformOrigin02.png">
+            </div>
         </section>
         
+        <section  class ="slide"  id ="svg-shapes">
+            
+            <h2>Let's Try Some CSS Transfoms!</h2>
+            
+            <a  href ="http://bit.ly/2MvWCMQ">http://bit.ly/2MvWCMQ</a>
+            
+            <p  class ="codepen"  data-height ="500"  data-theme-id ="0"  data-default-tab ="html,result"  data-user ="caitlinhaaf"  data-slug-hash ="XWWNMxE"  style ="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"  data-pen-title ="Basic SVG Shapes">
+            
+            <span>See the Pen <a  href ="https://codepen.io/caitlinhaaf/pen/XWWNMxE">
+            
+            Basic SVG Shapes</a> by Caitlin Haaf (<a  href ="https://codepen.io/caitlinhaaf">@caitlinhaaf</a>)
+            
+            on <a  href ="https://codepen.io">CodePen</a>.</span>
+            
+            </p>
+            
+            <script  async   src ="https://static.codepen.io/assets/embed/ei.js"></script>
+        
+        </section>
+
         <section  class ="slide"  id ="css-animations1">
         
             <h2>CSS Animations</h2>
-            
+            <p>It is possible to animate between different styles in CSS.</p>
             <p>Before adding an animation to an element, we have to define the animation.</p>
             
             <code>
@@ -430,9 +498,7 @@
             <h2>CSS Animations</h2>
             
             <p>
-            
-            When applying an animation to an element, we can define:
-            
+                When applying an animation to an element, we can define:
             <ul>
             
             <li><b>Name</b> - the name we gave the animation we wrote</li>
@@ -467,9 +533,9 @@
             
         </section>
             
-        <section  class ="slide"  id ="svg-shapes">
+        <section  class ="slide"  id ="svg-animations">
             
-            <h2>Let's Try Animating Some SVG Shapes!</h2>
+            <h2>Let's Try Some SVG Animations!</h2>
             
             <a  href ="http://bit.ly/2MvWCMQ">http://bit.ly/2MvWCMQ</a>
             
